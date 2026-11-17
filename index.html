@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Noti-fícame! - Lo que importa, sin perder tiempo. </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- VISTA PRINCIPAL (PORTADA) -->
+    <div id="view-home" class="page-view active">
+        <!-- Top Date Bar -->
+        <div class="top-date-bar">
+            <span>Martes 27 de octubre de 2026 · Santa Fe, Argentina</span>
+        </div>
+
+        <!-- Header / Logo -->
+        <header class="main-header">
+            <div class="header-inner">
+                <div class="logo-box">
+                    <img src="Logo de noti.png" alt="Logo ¡Noti-fícame!" class="main-logo-img">
+                </div>
+                <div class="header-slogan-container">
+                    <p class="slogan-text">La información que prende primero.</p>
+                </div>
+                <div class="header-action-right">
+                    <button class="nav-btn-game" onclick="navigateTo('view-games')">EDICIÓN PARA JUGAR</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navegación de Categorías -->
+        <nav class="main-nav">
+            <div class="nav-container">
+                <button class="nav-item active" data-filter="all">Inicio</button>
+                <button class="nav-item" data-filter="nacional">Nacional</button>
+                <button class="nav-item" data-filter="espectaculos">Espectáculos</button>
+                <button class="nav-item" data-filter="agenda">Agenda Santa Fe</button>
+                <button class="nav-item" data-filter="sociedad">Sociedad</button>
+                <button class="nav-item" data-filter="entretenimiento">Entretenimiento</button>
+                <button class="nav-item highlight-nav" onclick="navigateTo('view-games')">Zona Lúdica</button>
+            </div>
+        </nav>
+
+        <!-- Ticker Último Momento -->
+        <div class="ticker-bar">
+            <div class="ticker-inner">
+                <span class="ticker-badge">ÚLTIMO MOMENTO</span>
+                <span class="ticker-text">En portada: el debate sobre la Ley de Tierras y la soberanía nacional.</span>
+            </div>
+        </div>
+
+        <!-- Contenido Portada -->
+        <main class="home-content">
+            
+            <!-- Noticia Destacada 1: Ley de Tierras -->
+            <article class="featured-card">
+                <div class="featured-left">
+                    <span class="card-meta">01 / NACIONAL · INFORME</span>
+                    <h2 class="featured-title">LEY DE TIERRAS EN ARGENTINA: QUÉ ES, QUÉ REGULA Y POR QUÉ ES UN EJE CLAVE DE LA SOBERANÍA NACIONAL.</h2>
+                    <p class="featured-excerpt">La normativa sobre la titularidad extranjera de inmuebles rurales vuelve al centro del debate político y judicial. Sancionada en 2011, la Ley 26.737 establece límites a la compra de campos por parte de personas y corporaciones internacionales.</p>
+                    <button class="btn-read-full" onclick="openArticle('ley-tierras')">Ver noticia completa ↗</button>
+                </div>
+                <div class="featured-right">
+                    <div class="big-number-graphic">
+                        <span>26.737</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Resumen Informativo 4 Puntos -->
+            <section class="summary-grid-4">
+                <div class="summary-item">
+                    <h4>Qué regula la Ley 26.737</h4>
+                    <p>Establece un techo del 15% a la propiedad extranjera de tierras rurales a nivel nacional, provincial y municipal.</p>
+                </div>
+                <div class="summary-item">
+                    <h4>Techo para la titularidad extranjera</h4>
+                    <p>Ninguna persona física o jurídica de una misma nacionalidad puede superar el 30% de ese cupo.</p>
+                </div>
+                <div class="summary-item">
+                    <h4>La protección de fuentes de agua</h4>
+                    <p>Prohíbe expresamente la venta a extranjeros de terrenos que contengan cuerpos de agua permanentes.</p>
+                </div>
+                <div class="summary-item">
+                    <h4>El impacto del DNU 70/2023</h4>
+                    <p>La vigencia de la norma atraviesa controversias tras el intento de derogación y medidas cautelares.</p>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- Noticia Lollapalooza (Actualizada con datos nuevos) -->
+            <article class="standard-article">
+                <span class="card-meta">02 / ESPECTÁCULOS</span>
+                <h2 class="article-title">LOLLAPALOOZA ARGENTINA 2027: CONFIRMAN LA GRILLA OFICIAL CON TRAVIS SCOTT, CHARLI XCX Y TINI.</h2>
+                <p class="article-excerpt">El Hipódromo de San Isidro volverá a ser la sede del evento musical los días 12, 13 y 14 de marzo con más de 100 artistas.</p>
+                
+                <div class="lineup-grid">
+                    <a href="https://www.wikiwand.com/en/Travis_Scott" target="_blank" class="artist-card orange">Travis Scott</a>
+                    <a href="https://www.wikiwand.com/en/Charli_XCX" target="_blank" class="artist-card yellow">Charli xcx</a>
+                    <a href="https://www.wikiwand.com/en/The_Killers" target="_blank" class="artist-card red">The Killers</a>
+                    <a href="https://www.wikiwand.com/es/David_Guetta" target="_blank" class="artist-card light-orange">David Guetta</a>
+                    <a href="https://www.wikiwand.com/es/Futttura_Tour" target="_blank" class="artist-card dark">Tini (FUTTTURA)</a>
+                    <a href="https://www.wikiwand.com/es/Dillom" target="_blank" class="artist-card pink">Dillom / K4OS</a>
+                </div>
+                
+                <div class="article-footer-btn">
+                    <button class="btn-read-full" onclick="openArticle('lollapalooza')">Ver noticia completa ↗</button>
+                </div>
+            </article>
+
+            <hr class="section-divider">
+
+            <!-- Noticia Elecciones EE.UU. (Actualizada) -->
+            <article class="standard-article">
+                <span class="card-meta">03 / INTERNACIONAL · POLÍTICA</span>
+                <h2 class="article-title">ELECCIONES DE MEDIO TÉRMINO EN EE.UU.: EL PARTIDO DEMÓCRATA RECUPERA EL CONGRESO.</h2>
+                <p class="highlight-question">Una histórica "ola azul" asegura la mayoría demócrata en la Cámara y el Senado.</p>
+                <p class="article-excerpt">Con triunfos clave en gobernaciones y hitos sin precedentes en materia de diversidad e inclusión, el Partido Demócrata reconfigura el mapa político norteamericano.</p>
+                
+                <video controls class="main-video-player">
+                    <source src="Video.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+
+                <div class="article-footer-btn">
+                    <button class="btn-read-full" onclick="openArticle('ia-agua')">Ver noticia completa ↗</button>
+                </div>
+            </article>
+
+            <!-- Noticia Agenda Santa Fe (Actualizada con datos de Skay y Noche de los Museos) -->
+            <article class="standard-article">
+                <span class="card-meta">04 / AGENDA SANTA FE</span>
+                <h2 class="article-title">AGENDA CULTURAL EN SANTA FE: UNA SEMANA A PURA MÚSICA, ARTE Y PATRIMONIO.</h2>
+                
+                <div class="agenda-cards-grid">
+                    <div class="agenda-card yellow-bg">
+                        <span class="agenda-tag">MÚSICA EN VIVO</span>
+                        <h4>Skay y Los Fakires en Tribus</h4>
+                        <p>Sábado por la noche · Clásicos del rock nacional.</p>
+                    </div>
+                    <div class="agenda-card cream-bg">
+                        <span class="agenda-tag">MUSEOS</span>
+                        <h4>Noche de los Museos</h4>
+                        <p>Sábado de 18:00 a 00:00 hs · Entrada libre y gratuita.</p>
+                    </div>
+                    <div class="agenda-card orange-bg">
+                        <span class="agenda-tag">ROCK LOCAL</span>
+                        <h4>Misión Chivilcoy</h4>
+                        <p>Jueves · Centro Cultural Provincial.</p>
+                    </div>
+                    <div class="agenda-card pink-bg">
+                        <span class="agenda-tag">PREMIOS</span>
+                        <h4>Premios Máscara 2026</h4>
+                        <p>Teatro Municipal 1° de Mayo.</p>
+                    </div>
+                </div>
+
+                <div class="article-footer-btn">
+                    <button class="btn-read-full" onclick="openArticle('agenda-santa-fe')">Ver noticia completa ↗</button>
+                </div>
+            </article>
+
+            <hr class="section-divider">
+
+            <!-- Noticia Salud Mental + Podcast -->
+            <article class="standard-article">
+                <span class="card-meta">05 / SOCIEDAD Y SALUD</span>
+                <h2 class="article-title">SALUD MENTAL Y FICCIÓN EN CINE: ANALIZANDO "LO DEJAMOS ACÁ".</h2>
+                <p class="article-excerpt">Una conversación honesta sobre salud mental con la producción y el elenco de esta película disponible en Netflix.</p>
+
+                <!-- Reproductor de Audio -->
+                    <div class="custom-audio-player">
+                        <button class="audio-play-btn" id="podcastPlayBtn" onclick="toggleAudio()">
+                            <i class="fa-solid fa-play" id="audioIcon"></i>
+                        </button>
+                    <div class="audio-info">
+                        <span class="audio-title">Audio / "Lo dejamos acá"</span>
+                        <span class="audio-sub">Episodio especial: Salud mental en jóvenes e impacto audiovisual</span>
+                    </div>
+                        <span class="audio-time" id="audioTime">00:00 / 14:05</span>
+    
+                <!-- Etiqueta de audio real oculta -->
+                        <audio id="myAudio" src="Entrevista_enhanced.m4a"></audio>
+                    </div>
+
+                <div class="article-footer-btn">
+                    <button class="btn-read-full" onclick="openArticle('entrevista-salud-mental')">Ver noticia completa ↗</button>
+                </div>
+            </article>
+
+            <hr class="section-divider">
+
+            <!-- FAQ Acordeón -->
+            <section class="faq-section">
+                <h3 class="faq-heading">Preguntas para entender más la ley y la agenda:</h3>
+                
+                <div class="accordion-list">
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            1. ¿Qué es la Ley de Tierras en Argentina y a quiénes afecta principalmente?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-body">
+                            <p>La Ley 26.737 limita la adquisición de terrenos rurales por parte de extranjeros para resguardar la soberanía territorial y los recursos naturales estratégicos del país.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            2. ¿La regulación afecta retroactivamente a los extranjeros que ya tenían tierras antes de 2011?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-body">
+                            <p>No. La ley respeta los derechos adquiridos con anterioridad a su promulgación en el año 2011.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            3. ¿Existe un tope máximo de hectáreas de propiedad de una sola persona o corporación?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-body">
+                            <p>Sí, fija un tope de 1.000 hectáreas por titular en la zona núcleo pampeana o equivalencias reglamentadas en otras provincias.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            4. ¿Por qué la compra de tierras por extranjeros genera controversia con los recursos de agua dulce?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-body">
+                            <p>Debido a que muchas tierras estratégicas contienen acuíferos, lagos o nacientes de ríos indispensables para la seguridad hídrica y ambiental del país.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Banner Promocional Zona Lúdica -->
+            <div class="games-promo-banner" onclick="navigateTo('view-games')">
+                <div class="promo-text">
+                    <span class="promo-tag">ESPECIAL DE ENTRETENIMIENTO</span>
+                    <h3>ZONA LÚDICA / ¡DESAFIÁ TU MENTE!</h3>
+                    <p>Accedé a nuestras sopas de letras interactivas y desafiá tu vocabulario.</p>
+                </div>
+                <div class="promo-btn-box">
+                    <button class="promo-button">Jugar ahora</button>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="Logo de noti.png" alt="Logo Noti-fícame" class="footer-logo-img">
+                    <p class="footer-tagline">La información que prende primero. Periodismo joven, análisis local e innovación visual en Santa Fe.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Enlaces de Interés</h5>
+                    <ul>
+                        <li><a href="#" onclick="openArticle('ley-tierras')">Informe Ley de Tierras</a></li>
+                        <li><a href="#" onclick="openArticle('lollapalooza')">Grilla Lollapalooza</a></li>
+                        <li><a href="#" onclick="openArticle('agenda-santa-fe')">Agenda Santa Fe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Secciones</h5>
+                    <ul>
+                        <li><a href="#">Locales y Sociedad</a></li>
+                        <li><a href="#">Cultura y Espectáculos</a></li>
+                        <li><a href="#" onclick="navigateTo('view-games')">Juegos y Sopas de Letras</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Sobre nosotros</h5>
+                    <p>Redacción en Santa Fe, Argentina.<br>Hecho por Giovanni Rosa y Ámbar Savorgnani</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>¡NOTI-FÍCAME! · Ideas que también se juegan. © 2026 Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- VISTA DETALLE DE NOTICIA (LECTOR DE NOTICIAS) -->
+    <div id="view-article" class="page-view">
+        <header class="article-header">
+            <div class="article-header-inner">
+                <img src="Logo de noti.jpg" alt="Noti-fícame" class="mini-header-logo" onclick="navigateTo('view-home')">
+                <button class="btn-back-home" onclick="navigateTo('view-home')">← Volver a Inicio</button>
+            </div>
+        </header>
+
+        <main class="article-reader-container">
+            <div class="article-reader-card">
+                <span id="art-tag" class="card-meta">INFORME COMPLETO / ARGENTINA</span>
+                <h1 id="art-title" class="reader-title">Cargando Noticia...</h1>
+                <p id="art-subtitle" class="reader-subtitle"></p>
+                
+                <hr class="reader-divider">
+
+                <div id="art-body" class="reader-body-content">
+                    <!-- El contenido completo de la noticia se inyecta por JS -->
+                </div>
+
+                <div class="reader-footer-actions">
+                    <button class="btn-back-home" onclick="navigateTo('view-home')">← Volver a Inicio</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- VISTA ZONA LÚDICA (SOPAS DE LETRAS) -->
+    <div id="view-games" class="page-view">
+        <div class="games-top-header">
+            <span>¡NOTI-FÍCAME!</span>
+            <button class="btn-game-top-back" onclick="navigateTo('view-home')">EDICIÓN PARA JUGAR</button>
+        </div>
+
+        <div class="games-hero">
+            <div class="hero-left-box">
+                <span class="hero-tag">UN RECREO PARA LA CURIOSIDAD</span>
+                <h1>Zona lúdica / ¡Desafiá tu mente!</h1>
+            </div>
+            <div class="hero-right-card">
+                <p>Un espacio para hacer una pausa, explorar ideas y jugar con las palabras. Elegí tu temática favorita y resolvé la sopa de letras.</p>
+            </div>
+        </div>
+
+        <main class="games-main-content">
+            <div class="game-selection-panel">
+                <h3>Elige tu Sopa de Letras:</h3>
+                <div class="selector-buttons">
+                    <button class="game-select-btn active" onclick="loadWordSearch('compra')">🛒 Lista de la Compra</button>
+                    <button class="game-select-btn" onclick="loadWordSearch('materiales')">🏗️ Materiales</button>
+                    <button class="game-select-btn" onclick="loadWordSearch('flores')">🌸 Nombres de Flores</button>
+                </div>
+            </div>
+
+            <!-- Área del Juego -->
+            <div class="wordsearch-wrapper">
+                <div class="wordsearch-left">
+                    <h2 id="ws-title">Sopa de Letras</h2>
+                    <div class="game-stats-bar">
+                        <span>Encontradas: <b id="found-count">0</b> / <b id="total-count">0</b></span>
+                        <span id="timer-display">Tiempo: 00:00</span>
+                    </div>
+
+                    <!-- Grilla del Juego -->
+                    <div id="wordsearch-grid" class="wordsearch-grid"></div>
+                </div>
+
+                <div class="wordsearch-right">
+                    <h3>Palabras a buscar:</h3>
+                    <ul id="word-list-items" class="word-list"></ul>
+                </div>
+            </div>
+
+            <div class="bottom-home-btn-container">
+                <button class="btn-yellow-back" onclick="navigateTo('view-home')">← Volver a Inicio</button>
+            </div>
+        </main>
+
+        <footer class="games-footer">
+            ¡NOTI-FÍCAME! · Ideas que también se juegan.
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
